@@ -4,6 +4,8 @@ import React from "react";
 import Card from "./components/Form/Card";
 import Menu from "./components/Menu/index";
 import MenuLink from "./components/Menu/MenuLink";
+import Employees from "./components/Employees";
+
 
 function App() { 
   return (
@@ -20,6 +22,8 @@ function App() {
           <MenuLink to="/contact" isActive>Contact</MenuLink>
           <MenuLink to="/posts">Posts</MenuLink>
         </Menu>
+
+        <Employees />
     </div>
   );
 }
