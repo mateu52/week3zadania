@@ -1,0 +1,20 @@
+.menuCard{
+    border:1px outset gray;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 300px;
+    width: 400px;
+    margin:25px auto;
+    padding:20px;
+    float: center;
+}
+.menuCard h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.imgClass img{
+    height:100px;
+    width: 200px;
+    margin:2px;
+}
+.textDown{
+    font-size: 12px;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 //import MenuLink from './MenuLink';
-import "./menu.css"
+import "./menu.css";
 const styles={
     marginBottom:15
 };

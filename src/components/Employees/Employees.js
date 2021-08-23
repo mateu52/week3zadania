@@ -1,33 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
+import EmploDetails from './EmploDetails';
 
-const data=[
-    {
-        id:1,
-        name: "Andrzej",
-        surname: "Henk",
-        age:30,
-        salary:12000,
-        job:"Kierownik"
-    },
-    {
-        id:2,
-        name: "Janusz",
-        surname: "Stalker",
-        age:22,
-        salary:4500,
-        job:"Junior Developer",
-    }
-];
 
-const style={
 
-};
+const Employees = ({ data }) => {
+    const [details, setDetails]= useState("");
 
-function Employees({data}){
-
+    const On_click= (e) => {
+        let index = parseInt(e.target.id, 10);
+        const activePerson = data.filter((person) => person.id === index);
+        setDetails(activePerson[0].details);
+    };
     return(
-        <div>
-            <h2></h2>
+        <div className="tab">
+            <div className="tabLeft">
+                {data.map((person) => (
+                    <h2 key={person.id} onClick={On_click}>{person.name} {person.surname}</h2>
+                ))}
+            </div>
+            <EmploDetails details={details} />
         </div>
     );
 }

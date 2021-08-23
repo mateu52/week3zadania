@@ -1,11 +1,11 @@
 import React from "react";
-//import Button from "./components/Button";
-//import { Input, Textarea } from "./components/Form";
+import Button from "./components/Button";
+import { Input, Textarea } from "./components/Form";
 import Card from "./components/Form/Card";
 import Menu from "./components/Menu/index";
 import MenuLink from "./components/Menu/MenuLink";
 import Employees from "./components/Employees";
-
+import data from "./data";
 
 function App() { 
   return (
@@ -22,8 +22,9 @@ function App() {
           <MenuLink to="/contact" isActive>Contact</MenuLink>
           <MenuLink to="/posts">Posts</MenuLink>
         </Menu>
+        <Button />
 
-        <Employees />
+        <Employees data={data} />
     </div>
   );
 }
